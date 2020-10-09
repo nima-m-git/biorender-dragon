@@ -1,15 +1,15 @@
 const canvas = document.getElementById('canvas')
 const context = canvas.getContext('2d')
 
-function resize() {
+function onResize() {
 	canvas.width = window.innerWidth
 	canvas.height = window.innerHeight
 
 	draw(context)
 }
 
-window.addEventListener('load', resize)
-window.addEventListener('resize', resize)
+window.addEventListener('load', onResize)
+window.addEventListener('resize', onResize)
 
 function draw(ctx) {
 	// clear the canvas
