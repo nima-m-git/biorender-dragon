@@ -12,6 +12,8 @@ A dragon curve of degree `n=0` is a single line segment.
 
 To go from degree `n` to degree `n + 1`, replace each segment in the previous curve with 2 segments at right angles as in the image. Notice to which side of the line the new segments are placed.
 
+Fun fact: you can also get this curve by repeatedly folding a strip of paper in half `n` times and unfolding each fold to 90 degrees.
+
 ## See also
 
 [Golden dragon](https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm)
