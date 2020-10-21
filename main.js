@@ -12,7 +12,7 @@ function draw(ctx) {
 
 	// TODO: Draw something else!
 	drawLine(ctx, -200, 0, 200, 0);
-	// drawDragon(ctx, ...);
+	// drawDragon(ctx, 1, ...);
 }
 
 function drawLine(ctx, x1, y1, x2, y2) {
