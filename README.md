@@ -1,8 +1,11 @@
-Template for drawing on a full screen canvas.
+# Template for drawing on a full screen canvas.
 
-`npm run start` to serve
+## Running the project
 
-Links:
-[Dragon curve](https://en.wikipedia.org/wiki/Dragon_curve#Heighway_dragon)
+Serve this directory as a static web page:
+- with `node`: `npm run start`
+- with `python`: `python -m http.server`
 
-[Golden dragon](https://larryriddle.agnesscott.org/ifs/heighway/goldenDragon.htm)
+## Instructions
+
+[Drawing a dragon](./dragon.md)
