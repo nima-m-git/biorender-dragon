@@ -10,9 +10,7 @@ function draw(ctx) {
 	ctx.strokeStyle = '#333';
 	ctx.lineWidth = 2;
 
-	// TODO: Draw something else!
-	drawLine(ctx, -200, 0, 200, 0);
-	// drawDragon(ctx, 1, ...);
+	drawDragon(ctx, 1);
 }
 
 function drawLine(ctx, x1, y1, x2, y2) {
@@ -24,6 +22,7 @@ function drawLine(ctx, x1, y1, x2, y2) {
 
 function drawDragon(ctx, n, /* ... whatever else you would like :) */) {
 	// TODO
+	drawLine(ctx, -200, 0, 200, 0);
 }
 
 // Some biolerplate to draw on the fullscreen canvas
