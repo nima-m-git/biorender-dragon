@@ -1,6 +1,6 @@
 # Challenge
 
-Draw a dragon curve of degree `n`.
+Implement the `drawDragon` function in `main.js` to draw a dragon curve of degree `n`.
 
 ## Dragon curve
 
