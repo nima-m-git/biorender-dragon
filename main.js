@@ -1,4 +1,4 @@
-const iteration = 15;
+const iteration = 8;
 
 const degToRad = (degs) => (degs * Math.PI) / 180;
 
@@ -56,36 +56,23 @@ function drawDragon(ctx, n /* ... whatever else you would like :) */) {
   length = 200 / n ** 1.5;
 
   for (let i = 1; i < n; i++) {
-    const half = Math.ceil(moveset.length / 2);
-    let firstHalf = moveset.slice(0, half);
-    let secondHalf = moveset.slice(half);
-
+    const halfLength = Math.ceil(moveset.length / 2);
+    let firstHalf = moveset.slice(0, halfLength);
+    let secondHalf = moveset.slice(halfLength);
     let reversedHalf = firstHalf.map((move) => reversed(move));
 
     moveset = [...moveset, ...reversedHalf, ...secondHalf];
   }
 
-  console.log(moveset);
-
   let lastMove = [0, 0];
 
-  moveset.map((move, i) => {
-    move = transitions[move].map((coord) => coord * length);
-    let [x, y] = [lastMove[0] + move[0], lastMove[1] + move[1]];
-    // console.log(lastMove);
+  moveset.map((move) => {
+    let moveToCoord = transitions[move].map((coord) => coord * length);
+    let [x, y] = [lastMove[0] + moveToCoord[0], lastMove[1] + moveToCoord[1]];
 
     drawLine(ctx, lastMove[0], lastMove[1], x, y);
     lastMove = [x, y];
   });
-
-  // translatedMoves.forEach((move) => {
-  //   move = move.map((coord) => coord * length);
-  //   let [x, y] = [lastMove[0] + move[0], lastMove[1] + move[1]];
-  //   // console.log(lastMove);
-
-  //   drawLine(ctx, lastMove[0], lastMove[1], x, y);
-  //   lastMove = [x, y];
-  // });
 
   console.timeEnd("drawDragon");
 }
