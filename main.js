@@ -3,6 +3,7 @@ const iteration = 8;
 const degToRad = (degs) => (degs * Math.PI) / 180;
 
 const transitions = {
+  /* FIND AND FIX SOURCE OF BUG REVERSING TRANSITION */
   U: [0, -1],
   D: [0, 1],
   L: [-1, 0],
